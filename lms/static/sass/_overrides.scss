@@ -18,6 +18,9 @@ $body-font-family: $sans-serif;
 $theme-serif-font: 'Crimson Text';
 $serif: $theme-serif-font, 'Crimson Text MS';
 
+//Gray Color Variables
+$gray: #3f3f3f; //Main Text Color
+$gray-75: lighten($gray, 18.25%); //Lighter Text Color
 
 $gray-2: rgb(242,242,242);
 $main-color:  rgb(31,73,200);  //Main Blue color theme	
@@ -138,3 +141,205 @@ span.cc-showBodyOfDisplayOnHover{
 	line-height: 18px	!important;
 }
 
+//-----------------
+//  Mixin Styles
+//-----------------
+@mixin login_register_h1_style {
+    clip: auto !important;
+    height: 50px;
+    width: 550px;
+    top: 0;
+}
+
+@mixin footer_references_style {
+    margin: 0 !important;
+    text-align: right;
+}
+//-------------------
+// Footer Styling
+//------------------
+.disclaimer {
+    margin: 20pt;
+    text-align: center;
+    line-height: 1.5;
+    font-style: italic;
+    font-family: "Times New Roman";
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.sponsors {
+    margin-top:10pt;
+    font-style: normal;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: smaller;
+    line-height: 2;
+}
+
+.wrapper-footer footer {
+    box-sizing: border-box;
+    max-width: 1180px;
+    min-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+    .colophon {
+
+        margin-right:2.35765%;
+        width: 65.88078%;
+        float: left;    
+        .nav-colophon{ 
+            margin: 5px 0;
+    
+            li{
+                float: left;
+                margin-right: 15px;
+                a{
+                    color: $gray-75;
+                    &:hover {
+                        color:$main-color;
+                    }
+                }
+             }
+        }
+    }
+}
+
+
+// ------------------------------
+// edX Pattern Library: Utilities - Dropdown Menu
+//
+// About: Contains base styling for alerts.
+// ----------------------------
+
+// #CONFIG
+// #UTILITIES
+// #GENERAL
+// #INDIVIDUAL CASES
+
+// typography: config - stacks
+$font-family-sans-serif:    'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-serif:         'Georgia', Cambria, 'Times New Roman', Times, serif !default;
+$font-family-monospace:     'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
+$icon-font:                 'edx-icons', 'Open Sans', sans-serif !default;
+
+$transparent:                   rgba(0, 0, 0, 0);
+
+$black:                         rgb(17, 16, 16);
+$black-t:                       rgb(0, 0, 0); // true black
+$white:                         rgb(252, 252, 252);
+$white-t:                       rgb(255, 255, 255); // true white
+$gray:                          rgb(167, 164, 164);
+$gray-cool:                     rgb(158, 177, 185);
+$red:                           rgb(178, 6, 16);
+$yellow:                        rgb(253, 188, 86);
+$green:                         rgb(37, 184, 90);
+$blue:                          rgb(0, 121, 188);
+$pink:                          rgb(203, 89, 141);
+
+header.global .primary>a {
+    border: 1px solid #7d99cb;
+    border-top-color: rgb(125, 153, 203);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(125, 153, 203);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(125, 153, 203);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(125, 153, 203);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.6);
+    color: #2e2e2e;
+    display: inline-block;
+    font-family: "Source Sans","Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    line-height: 1em;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(255,255,255,0.6);
+    text-color: rgb(255, 255, 255);
+    vertical-align: middle;
+}
+
+header.global .user a.user-link {
+    background-color: #e9e9e9;
+    padding: 5px 12px 10px 10px !important;
+    margin-right: 30px;
+    position: relative;
+    text-transform: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0;
+    border-bottom-right-radius: 0px;
+    background-image: none;
+}
+
+
+header.global .user .dropdown {
+    // copied from above
+    border: 1px solid #7d99cb;
+    border-top-color: rgb(125, 153, 203) !important;
+    border-top-style: solid !important;
+    border-top-width: 1px !important;
+    border-right-color: rgb(125, 153, 203) !important;
+    border-right-style: solid !important;
+    border-right-width: 1px !important;
+    border-bottom-color: rgb(125, 153, 203) !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+    border-left-color: rgb(125, 153, 203) !important;
+    border-left-style: solid !important;
+    border-left-width: 1px !important;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 3px;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.6) !important;
+    color: #2e2e2e;
+    display: inline-block;
+    font-family: "Source Sans","Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    line-height: 1em;
+    // end  from above
+
+    //width: 25px;
+    height: 34px;
+    border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-topright-radius: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-bottomright-radius: 4px;
+    border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-bottomleft-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none !important;
+    //padding: 5px 8px 11px 10px;
+    line-height: 1em;
+    margin-left: none;
+    //padding: 10px 12px;
+    padding: 5px 12px 12px 10px !important;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(255,255,255,0.6);
+    vertical-align: middle !important;
+    background-color: #e9e9e9 !important;
+}
+
+header.global .user a.user-link .icon {
+    display: inline-block;
+    float: left;
+    //margin: 2px 6px -3px 3px;
+    font-size: 1.2em;
+    color: #8a8c8f;
+}
